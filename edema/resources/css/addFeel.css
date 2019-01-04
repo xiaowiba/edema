@@ -1,0 +1,265 @@
+/*列表头*/
+.mui-content > .mui-table-view:first-child {
+    margin-top: 0 !important;
+}
+
+/*单位*/
+.danWei {
+    padding: 0;
+    font-size: 17px;
+    color: #9C9C9C;
+    height: 40px;
+    line-height: 40px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+/*每个部分*/
+.mui-table-view-cell {
+    padding: 8px 15px;
+}
+
+/*每个部分的多了个下划线*/
+.mui-table-view-cell:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+}
+
+/*整体的那个下划线*/
+.mui-table-view:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+}
+
+/*整体的那个上划线*/
+.mui-table-view:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+    top: -1px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #F7F7F7;
+}
+
+/*清除样式*/
+.mui-input-row .mui-input-clear ~ .mui-icon-clear {
+    top: 9px;
+    right: 30px;
+}
+
+/*记录时间*/
+#time {
+    width: 100%;
+    color: #464646;
+}
+
+/*记录日期*/
+#date {
+    width: 100%;
+    color: #464646;
+}
+
+/*按钮盒子*/
+.btnDiv {
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.subBtn {
+    padding: 10px 100px;
+    background-color: #2494F3 !important;
+    border: #2494F3 !important;
+}
+
+/*请选择*/
+.pChoice {
+    float: right;
+    width: 40%;
+    text-align: center;
+    padding: 9px 0;
+    color: #000;
+}
+
+/*>*/
+.mui-navigate-right:after, .mui-push-left:after, .mui-push-right:after {
+    font-size: inherit;
+    line-height: 1;
+    position: absolute;
+    top: 45%;
+    display: inline-block;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #bbb;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*移除底部或顶部三角,需要在删除此代码*/
+.mui-popover .mui-popover-arrow:after {
+    width: 0;
+}
+
+/*弹出层*/
+#painDiv {
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+}
+
+.painBtn {
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+
+.painCancel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 5px;
+}
+
+.painVal {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#painRes {
+    color: #64B1F6;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.painSub {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 5px 0 0;
+}
+
+.painImg {
+    width: 100%;
+    height: 70px;
+    /*background: url(../../../lymphedema/resources/img/face/01.png) no-repeat center center;*/
+    /*background-size: contain;*/
+    display: flex;
+}
+
+.pain1 {
+    display: flex;
+    flex: 1;
+    background: url(../../../edema/resources/img/face/1.png) no-repeat center center;
+    background-size: contain;
+}
+
+.pain2 {
+    display: flex;
+    flex: 1;
+    background: url(../../../edema/resources/img/face/2.png) no-repeat center center;
+    background-size: contain;
+}
+
+.pain3 {
+    display: flex;
+    flex: 1;
+    background: url(../../../edema/resources/img/face/3.png) no-repeat center center;
+    background-size: contain;
+}
+
+.pain4 {
+    display: flex;
+    flex: 1;
+    background: url(../../../edema/resources/img/face/4.png) no-repeat center center;
+    background-size: contain;
+}
+
+.pain5 {
+    display: flex;
+    flex: 1;
+    background: url(../../../edema/resources/img/face/5.png) no-repeat center center;
+    background-size: contain;
+}
+
+.pain6 {
+    display: flex;
+    flex: 1;
+    background: url(../../../edema/resources/img/face/6.png) no-repeat center center;
+    background-size: contain;
+}
+
+.painRuler {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+#rulerWrapper {
+    top: 20%;
+}
+
+.painFont {
+    width: 100%;
+    height: 80px;
+}
+
+.painFontTitle {
+    font-size: 10px;
+    color: #A1A1A1;
+    padding: 5px 10px;
+}
+
+.painLevel {
+    display: flex;
+    color: #64B1F6;
+    padding: 0 5px;
+}
+
+.levelVal {
+    display: flex;
+    flex: 1;
+    font-size: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.levelName {
+    display: flex;
+    flex: 3;
+    font-size: 10px;
+    align-items: center;
+}
+
+/*弹出框样式-start*/
+.mui-toast-container {
+    bottom: 40% !important;
+}

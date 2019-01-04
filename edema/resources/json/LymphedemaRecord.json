@@ -1,0 +1,80 @@
+{
+  "result": "200",
+  "data": [{
+    "SectionNo": 4,
+    "SectionName": "四肢围度测量",
+    "SectionEName": "Limb",
+    "Data": {
+      "PatientID": 19814,
+      "Position": "左侧-手腕",
+      "Value": "24",
+      "Img": [
+        "https://xhyydevelopapp.mdruby.cn/hdata/XHYY/PatientLymphedemaRecord/Limb/19814/7803c9ccff6b4f8596f7edef890b352e",
+        "https://xhyydevelopapp.mdruby.cn/hdata/XHYY/PatientLymphedemaRecord/Limb/19814/d60d089073834941ada7880ec7df8582",
+        "https://xhyydevelopapp.mdruby.cn/hdata/XHYY/PatientLymphedemaRecord/Limb/19814/1d53e4795fc14906a0e3935735352aed"
+      ],
+      "CreateDate": "2019-01-04 15:45:00"
+    }
+  },
+    {
+      "SectionNo": 4,
+      "SectionName": "四肢围度测量",
+      "SectionEName": "Limb",
+      "Data": {
+        "PatientID": 19814,
+        "Position": "右侧-肘部",
+        "Value": "19",
+        "Img": [
+          "https://xhyydevelopapp.mdruby.cn/hdata/XHYY/PatientLymphedemaRecord/Limb/19814/daa7a4fadbbb408a90bf5014c9caece5"
+        ],
+        "CreateDate": "2019-01-04 09:58:00"
+      }
+    },
+    {
+      "SectionNo": 4,
+      "SectionName": "四肢围度测量",
+      "SectionEName": "Limb",
+      "Data": {
+        "PatientID": 19814,
+        "Position": "右侧-肘部",
+        "Value": "20",
+        "Img": [],
+        "CreateDate": "2019-01-04 08:37:00"
+      }
+    },
+    {
+      "SectionNo": 3,
+      "SectionName": "自我感受",
+      "SectionEName": "Feel",
+      "Data": {
+        "PatientID": 19814,
+        "EdemaCondition": "加重",
+        "NRS": "4",
+        "CreateDate": "2019-01-04 08:37:00"
+      }
+    },
+    {
+      "SectionNo": 2,
+      "SectionName": "运动记录",
+      "SectionEName": "Sports",
+      "Data": {
+        "PatientID": 19814,
+        "SportsTime": "5",
+        "SportsMode": "1",
+        "CreateDate": "2019-01-04 08:37:00"
+      }
+    },
+    {
+      "SectionNo": 1,
+      "SectionName": "体重记录",
+      "SectionEName": "Weight",
+      "Data": {
+        "PatientID": 19814,
+        "Weight": "69",
+        "CreateDate": "2019-01-04 08:36:00"
+      }
+    }
+  ],
+  "message": "成功",
+  "isdes": "0"
+}

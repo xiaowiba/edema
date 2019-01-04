@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>水肿记录</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="../js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="../js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="../js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/index.css" />
+
+    <!--angular-start-->
+    <script src="../css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="../js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="../js/plugin/mui/js/mui.min.js"></script>
+    <script src="../js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="../js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="../js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="../js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+</head>
+
+<body ng-app="edemaApp" ng-controller="indexController">
+
+<header class="mui-bar mui-bar-nav headerBigDiv">
+    <div class="headerDiv">
+        <div class="yesterdayTime" ng-click="getYesterdayTime();"></div>
+        <div class="widgetTime">
+            <div id="indexTime"></div>
+        </div>
+        <div class="tomorrowTime" ng-click="getTomorrowTime();"></div>
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined todayTime" ng-click="getToday();">今天</button>
+    </div>
+</header>
+
+<!--原来顶部的老样式-start-->
+<!--div class="funcDiv">
+    <div class="funcItem">
+        <div class="ItemDiv" ng-click="goAdd('addWeight');">
+            <img src="resources/img/weight.png" class="titleImg" />
+            <p class="f15">体重</p>
+        </div>
+    </div>
+    <div class="funcItem">
+        <div class="ItemDiv" ng-click="goAdd('addMotion');">
+            <img src="resources/img/motion.png" class="titleImg" />
+            <p class="f15">运动记录</p>
+        </div>
+    </div>
+    <div class="funcItem">
+        <div class="ItemDiv" ng-click="goAdd('addFeel');">
+            <img src="resources/img/feel.png" class="titleImg" />
+            <p class="f15">自我感受</p>
+        </div>
+    </div>
+    <div class="funcItem">
+        <div class="ItemDiv" ng-click="goAdd('limb');">
+            <img src="resources/img/limb.png" class="titleImg" />
+            <p class="f15">四肢围度</p>
+        </div>
+    </div>
+</div-->
+<!--原来顶部的老样式-end-->
+
+<div class="funcDivNew" style="padding: 48px 0 0 0;">
+    <div class="funcItem">
+        <div class="ItemDivNew" ng-click="goAdd('addWeight');" style="background-color: #F98A5F;">
+            <div class="ItemImgNew">
+                <img src="resources/img/weight.png" class="titleImg" />
+            </div>
+            <div class="ItemFontNew">
+                <span class="f15">添加体重记录</span>
+            </div>
+        </div>
+    </div>
+    <div class="funcItem">
+        <div class="ItemDivNew" ng-click="goAdd('addMotion');" style="background-color: #2494F3;">
+            <div class="ItemImgNew">
+                <img src="resources/img/motion.png" class="titleImg" />
+            </div>
+            <div class="ItemFontNew">
+                <span class="f15">添加运动记录</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="funcDivNew" style="padding: 0;">
+    <div class="funcItem">
+        <div class="ItemDivNew" ng-click="goAdd('addFeel');" style="background-color: #A37BFF;">
+            <div class="ItemImgNew">
+                <img src="resources/img/feel.png" class="titleImg" />
+            </div>
+            <div class="ItemFontNew">
+                <span class="f15">添加自我感受</span>
+            </div>
+        </div>
+    </div>
+    <div class="funcItem">
+        <div class="ItemDivNew" ng-click="goAdd('limb');" style="background-color: #FF7BBF;">
+            <div class="ItemImgNew">
+                <img src="resources/img/limb.png" class="titleImg" />
+            </div>
+            <div class="ItemFontNew">
+                <span class="f15">添加四肢围度测量</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mui-content" style="padding: 0 0 0 0;" ng-show="container">
+
+    <ul class="mui-table-view" ng-repeat="item in res track by $index">
+
+        <li class="liNone"></li>
+
+        <li class="mui-table-view-cell mui-media" ng-if="item.SectionNo === 1">
+            <a href="javascript:void(0);">
+                <div class="mui-media-body">
+                    <div class="weightTitleDiv">
+                        <div class="weightTitle">
+                            <span>体重记录</span>
+                        </div>
+                        <div class="weightVal">
+                            <span ng-bind="item.Data.Weight"></span>
+                            <span>kg</span>
+                        </div>
+                        <div class="itemTime">
+                            <span ng-bind="item.Data.CreateDate | timeFilter"></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="mui-table-view-cell mui-media" ng-if="item.SectionNo === 2">
+            <a href="javascript:void(0);">
+                <div class="mui-media-body">
+                    <div class="motionTitleDiv">
+                        <div class="motionTitle">
+                            <span>运动记录</span>
+                        </div>
+                        <div class="motionVal">
+                            <span ng-bind="item.Data.SportsTime | sportsTimeFilter"></span>
+                        </div>
+                        <div class="itemTime">
+                            <span ng-bind="item.Data.CreateDate | timeFilter"></span>
+                        </div>
+                    </div>
+                    <div class="motionContent yiChu">
+                        <span ng-bind="item.Data.SportsMode"></span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="mui-table-view-cell mui-media" ng-if="item.SectionNo === 3">
+            <a href="javascript:void(0);">
+                <div class="mui-media-body">
+                    <div class="feelTitleDiv">
+                        <div class="feelTitle">
+                            <span>自我感受</span>
+                        </div>
+                        <div class="itemTime">
+                            <span ng-bind="item.Data.CreateDate | timeFilter"></span>
+                        </div>
+                    </div>
+                    <div class="feelContent">
+                        <div class="edema">
+                            <span>水肿情况</span>
+                        </div>
+                        <div class="edemaVal">
+                            <span ng-bind="item.Data.EdemaCondition">加重</span>
+                        </div>
+                        <div class="pain">
+                            <span>疼痛程度</span>
+                        </div>
+                        <div class="painVal">
+                            <span ng-bind="item.Data.NRS">1.5</span>
+                        </div>
+                        <div class="painImg">
+                            <img ng-src="{{item.Data.NRS | NRSFilter}}" />
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="mui-table-view-cell mui-media" ng-if="item.SectionNo === 4">
+            <a href="javascript:void(0);" class="mui-active">
+                <div class="mui-media-body">
+                    <div class="limbTitleDiv">
+                        <div class="limbTitle">
+                            <span>四肢围度测量</span>
+                        </div>
+                        <div class="itemTime">
+                            <span ng-bind="item.Data.CreateDate | timeFilter"></span>
+                        </div>
+                    </div>
+                    <div class="limbContent">
+                        <div class="measuring">
+                            <span>测量部位</span>
+                        </div>
+                        <div class="measuringVal">
+                            <span ng-bind="item.Data.Position"></span>
+                        </div>
+                        <div class="survey">
+                            <span>测量数值</span>
+                        </div>
+                        <div class="surveyVal">
+                            <span ng-bind="item.Data.Value"></span>
+                            <span>cm</span>
+                        </div>
+                    </div>
+                    <div class="limbImgContent">
+                        <div class="limbImg" ng-repeat="Img in item.Data.Img">
+                            <img ng-src="{{Img}}" data-preview-src="" data-preview-group="1" class="limbImgItem"/>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+    <ul class="mui-table-view">
+        <li class="liNone"></li>
+    </ul>
+
+</div>
+
+<div class="none" ng-show="none"></div>
+
+</body>
+
+<script src="resources/js/app.js"></script>
+<script src="resources/js/index.js"></script>
+
+</html>

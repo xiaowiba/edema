@@ -1,0 +1,109 @@
+/*列表头*/
+.mui-content > .mui-table-view:first-child {
+    margin-top: 0 !important;
+}
+
+.input-value {
+    position: absolute;
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    right: 50px;
+    text-align: right;
+}
+
+/*单位*/
+.danWei {
+    padding: 0;
+    font-size: 17px;
+    color: #9C9C9C;
+    height: 40px;
+    line-height: 40px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+/*每个部分*/
+.mui-table-view-cell {
+    padding: 8px 15px;
+}
+
+/*每个部分的多了个下划线*/
+.mui-table-view-cell:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+}
+
+/*整体的那个下划线*/
+.mui-table-view:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+}
+
+/*整体的那个上划线*/
+.mui-table-view:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+    top: -1px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #F7F7F7;
+}
+
+/*清除样式*/
+.mui-input-row .mui-input-clear ~ .mui-icon-clear {
+    top: 9px;
+    right: 30px;
+}
+
+/*运动时间*/
+#time {
+    width: 100%;
+    color: #464646;
+}
+
+/*运动日期*/
+#date {
+    width: 100%;
+    color: #464646;
+}
+
+/*按钮盒子*/
+.btnDiv {
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.subBtn {
+    padding: 10px 100px;
+    background-color: #2494F3 !important;
+    border: #2494F3 !important;
+}
+
+textarea {
+    border: none;
+}

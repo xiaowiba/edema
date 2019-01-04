@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>四肢围度测量</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="../js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="../js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="../js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/limb.css" />
+
+    <!--angular-start-->
+    <script src="../css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="../js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="../js/plugin/mui/js/mui.min.js"></script>
+    <script src="../js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="../js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+</head>
+
+<body ng-app="edemaApp" ng-controller="limbController">
+
+<div class="mui-content limbTitle">
+    <div id="icon-info">
+        <span class="mui-icon mui-icon-info"></span><span>请选择您需要测量的部位:</span>
+    </div>
+</div>
+
+<div class="mui-content limbContent">
+    <div class="anconDiv">
+        <div class="left-ancon" id="leftAncon"></div>
+        <div class="right-ancon" id="rightAncon"></div>
+    </div>
+
+    <div class="finesseDiv">
+        <div class="left-finesse" id="leftFinesse"></div>
+        <div class="right-finesse" id="rightFinesse"></div>
+    </div>
+
+    <div class="kneeDiv">
+        <div class="left-knee" id="leftKnee"></div>
+        <div class="right-knee" id="rightKnee"></div>
+    </div>
+
+    <div class="ankleDiv">
+        <div class="left-ankle" id="leftAnkle"></div>
+        <div class="right-ankle" id="rightAnkle"></div>
+    </div>
+
+    <div class="fontDiv">
+        测量示意图
+    </div>
+</div>
+
+</body>
+
+<script src="resources/js/app.js"></script>
+<script src="resources/js/limb.js"></script>
+
+</html>

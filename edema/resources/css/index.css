@@ -1,0 +1,563 @@
+body {
+    font-family:'Mirages Custom',Merriweather,'Open Sans',"PingFang SC",'Hiragino Sans GB','Microsoft Yahei','WenQuanYi Micro Hei','Segoe UI Emoji','Segoe UI Symbol',Helvetica,Arial,sans-serif;
+}
+
+/*无图片*/
+.none {
+    width: 100%;
+    height: 50vh;
+    background: url(../../../edema/resources/img/none.png) no-repeat center center;
+    background-size: 105px 100px;
+}
+
+.mui-active {
+    background-color: #FFFFFF !important;
+}
+
+/*顶部*/
+.mui-bar-nav {
+    box-shadow: none;
+    background-color: #FFFFFF !important;
+}
+
+.mui-bar {
+    height: 45px !important;
+}
+
+/*顶部文字*/
+.mui-bar a, .mui-bar h1 {
+    color: #000000 !important;
+}
+
+/*顶部大盒子*/
+.headerBigDiv {
+    border-bottom: 1px solid #efeff4;
+}
+
+/*顶部内容盒子*/
+.headerDiv {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/*昨天时间*/
+.yesterdayTime {
+    line-height: 45px;
+    display: flex;
+    flex: 1;
+    background: url(../../../edema/resources/img/yesterdayTimeBlue.png) no-repeat center center;
+    background-size: 24px 24px;
+}
+
+/*组件时间*/
+.widgetTime {
+    display: flex;
+    flex: 4.5;
+    border: 1px solid #007aff;
+    border-radius: 5px;
+    padding: 0;
+    margin: 8px 0;
+}
+
+#indexTime {
+    width: 100%;
+    height: 28px;
+    line-height: 26px;
+    text-align: center;
+}
+
+/*明天时间*/
+.tomorrowTime {
+    line-height: 45px;
+    display: flex;
+    flex: 1;
+    background: url(../../../edema/resources/img/tomorrowTimeBlue.png) no-repeat center center;
+    background-size: 24px 24px;
+}
+
+/*今天时间*/
+.todayTime {
+    top: 0 !important;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    margin: 8px 0 !important;
+}
+
+/*4个标题的盒子*/
+.funcDiv {
+    display: flex;
+    padding: 60px 0 0 0;
+    background-color: #ffffff;
+}
+
+.funcItem {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ItemDiv {
+    text-align: center;
+}
+
+.ItemDiv p {
+    color: #4D4D4D;
+}
+
+/*4个图标样式*/
+.titleImg {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/*4个标题的字*/
+.mui-segmented-control .mui-control-item {
+    line-height: 24px !important;
+}
+
+/*4个标题的盒子*/
+.funcDivNew {
+    display: flex;
+    /*background-color: #ffffff;*/
+}
+
+.ItemDivNew {
+    display: flex;margin: 5px 5px 0 5px;border-radius: 8px;
+}
+
+.ItemImgNew {
+    display: flex;flex: 1;justify-content: center;align-items: center;padding: 5px 0 5px 5px;
+}
+
+.ItemFontNew {
+    display: flex;flex: 4;justify-content: center;align-items: center;color: #ffffff;
+}
+
+/*点击时的样式*/
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    border: none !important;
+}
+
+/*默认时的样式*/
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: #000000 !important;
+}
+
+/*第一个li*/
+.mui-content > .mui-table-view:first-child {
+    margin-top: 0 !important;
+}
+
+/*最后一个li会带横线，去掉*/
+.mui-table-view-cell:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+}
+
+/*展位的li*/
+.liNone {
+    height: 10px;
+    width: 100%;
+    background-color: #efeff4;
+}
+
+/*每一项的时间*/
+.itemTime {
+    color: #C7C7C7;
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/*体重盒子*/
+.weightTitleDiv {
+    display: flex;
+}
+
+/*体重标题*/
+.weightTitle {
+    display: flex;
+    flex: 1;
+    color: #4D4D4D;
+    font-size: 16px;
+}
+
+/*体重值*/
+.weightVal {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-size: 14px;
+    color: #4AA2F4;
+}
+
+/*运动标题盒子*/
+.motionTitleDiv {
+    display: flex;
+}
+
+/*运动标题*/
+.motionTitle {
+    margin: 0 0 5px 0;
+    display: flex;
+    flex: 1;
+    color: #4D4D4D;
+    font-size: 16px;
+}
+
+/*运动值*/
+.motionVal {
+    margin: 0 0 5px 0;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-size: 14px;
+    color: #4AA2F4;
+}
+
+/*运动内容*/
+.motionContent {
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+/*感受标题盒子*/
+.feelTitleDiv {
+    display: flex;
+}
+
+/*感受标题*/
+.feelTitle {
+    margin: 0 0 5px 0;
+    display: flex;
+    flex: 1;
+    color: #4D4D4D;
+    font-size: 16px;
+}
+
+/*感受内容盒子*/
+.feelContent {
+    display: flex;
+}
+
+/*水肿情况*/
+.edema {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+/*水肿情况程度*/
+.edemaVal {
+    display: flex;
+    flex: 1;
+    color: #4AA2F4;
+    font-size: 14px;
+}
+
+/*疼痛程度*/
+.pain {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+/*疼痛程度值*/
+.painVal {
+    display: flex;
+    flex: 1;
+    color: #4AA2F4;
+    font-size: 14px;
+}
+
+/*疼痛值图片*/
+.painImg {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.painImg img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/*四肢盒子*/
+.limbTitleDiv {
+    display: flex;
+}
+
+/*四肢标题*/
+.limbTitle {
+    margin: 0 0 5px 0;
+    display: flex;
+    flex: 1;
+    color: #4D4D4D;
+    font-size: 16px;
+}
+
+/*四肢内容*/
+.limbContent {
+    display: flex;
+}
+
+/*测量部位*/
+.measuring {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+/*测量部位名称*/
+.measuringVal {
+    display: flex;
+    flex: 1;
+    color: #4AA2F4;
+    font-size: 14px;
+}
+
+/*测量数值*/
+.survey {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    color: #4D4D4D;
+}
+
+/*测量数值值*/
+.surveyVal {
+    display: flex;
+    flex: 1;
+    color: #4AA2F4;
+    font-size: 14px;
+}
+
+/*四肢图片盒子*/
+.limbImgContent {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/*四肢图片*/
+.limbImg {
+    display: flex;
+    flex: .25;
+    padding: 0;
+    margin: 5px 5px 5px 0;
+    height: 20vw;
+}
+
+.limbImg img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hiddenImg {
+    visibility: hidden !important;
+}
+
+/*整体的那个下划线*/
+.mui-table-view:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+}
+
+.mui-table-view:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: transparent;
+    top: -1px;
+}
+
+/**********************************************************************************************************************/
+.mui-preview-image.mui-fullscreen {
+    position: fixed;
+    z-index: 20;
+    background-color: #000;
+}
+.mui-preview-header,
+.mui-preview-footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+}
+.mui-preview-header {
+    height: 44px;
+    top: 0;
+}
+.mui-preview-footer {
+    height: 50px;
+    bottom: 0px;
+}
+.mui-preview-header .mui-preview-indicator {
+    display: block;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    margin: 15px auto 4;
+    width: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    font-size: 16px;
+}
+.mui-preview-image {
+    display: none;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.mui-preview-image.mui-preview-in {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.mui-preview-image.mui-preview-out {
+    background: none;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+.mui-preview-image.mui-preview-out .mui-preview-header,
+.mui-preview-image.mui-preview-out .mui-preview-footer {
+    display: none;
+}
+.mui-zoom-scroller {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+}
+.mui-zoom {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.mui-slider .mui-slider-group .mui-slider-item img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+    width: 100%;
+}
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+    display: inline-table;
+}
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+    display: table-cell;
+    vertical-align: middle;
+}
+.mui-preview-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.mui-preview-loading.mui-active {
+    display: block;
+}
+.mui-preview-loading .mui-spinner-white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    height: 50px;
+    width: 50px;
+}
+.mui-preview-image img.mui-transitioning {
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+p img {
+    max-width: 100%;
+    height: auto;
+}
+/**********************************************************************************************************************/

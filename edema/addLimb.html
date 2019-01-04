@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>添加四肢围度测量</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="../js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="../js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="../js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/addLimb.css" />
+
+    <link rel="stylesheet" href="../js/plugin/imgUp/css/index.css" />
+
+    <!--angular-start-->
+    <script src="../css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="../js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="../js/plugin/mui/js/mui.min.js"></script>
+    <script src="../js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="../js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+</head>
+
+<body ng-app="edemaApp" ng-controller="addLimbController">
+
+<div class="title">
+    <div class="titleImg">
+        <div class="titleVal"></div>
+    </div>
+    <div class="titleFont">
+        <div class="bodyName">
+            <span id="body-name"></span>
+        </div>
+        <div class="bodyDisc">
+            <span id="body-disc"></span>
+        </div>
+    </div>
+</div>
+
+<div class="mui-content">
+
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell border-bottom">
+            <div class="mui-input-row">
+                <label>测量时间</label>
+                <div class="danWei" id="time">10:21</div>
+            </div>
+        </li>
+
+        <li class="mui-table-view-cell border-bottom">
+            <div class="mui-input-row">
+                <label>测量日期</label>
+                <div class="danWei" id="date">2018-10-22</div>
+            </div>
+        </li>
+
+        <li class="mui-table-view-cell border-bottom" id="input-value-div">
+            <div class="mui-input-row">
+                <label>测量数值</label>
+                <!--input type="text" placeholder="" class="mui-input-clear" maxlength="3" /-->
+                <div class="input-value" id="value"></div>
+                <div class="danWei">cm</div>
+            </div>
+        </li>
+
+        <li class="mui-table-view-cell border-bottom">
+            <div class="limbImgContent">
+                <!--div class="limbImg">
+                    <img src="resources/img/1.jpg" data-preview-src="" data-preview-group="1" />
+                </div>
+                <div class="limbImg">
+                    <img src="resources/img/2.jpg" data-preview-src="" data-preview-group="1" />
+                </div>
+                <div class="limbImg">
+                    <img src="resources/img/3.jpg" data-preview-src="" data-preview-group="1" />
+                </div>
+                <div class="limbImg hiddenImg">
+                    <img src="resources/img/4.jpg" data-preview-src="" data-preview-group="1" />
+                </div-->
+                <div class="z_photo upimg-div">
+                    <section class="z_file fl">
+                        <!--<img src="/js/plugin/imgUp/img/a11.png" class="add-img">-->
+                        <input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple />
+                    </section>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="tip">
+        <div class="tip-left">
+            <span>提示：</span>
+        </div>
+        <div class="tip-right">
+            <span>测量时皮尺的松紧度应适宜，以对皮肤不产生夹挤为事宜，不要过紧或过松。测量时间尽量固定。</span>
+        </div>
+    </div>
+
+    <div class="btnDiv" id="submit">
+        <div class="mui-btn mui-btn-primary subBtn" id="sButton">
+            确定添加
+        </div>
+    </div>
+
+</div>
+
+<aside class="mask works-mask">
+    <div class="mask-content" style="position: fixed;top: 50%;left: 16%;width: 270px;height: 140px;border-radius: 13px;margin: 0;">
+        <p class="del-p" style="height: 86px;line-height: 94px;">您确定要删除吗？</p>
+        <p class="check-p" style="height: 45px;line-height: 55px;">
+            <span class="del-com wsdel-ok">确定</span>
+            <span class="wsdel-no">取消</span>
+        </p>
+    </div>
+</aside>
+
+</body>
+
+<script src="resources/js/app.js"></script>
+<script src="resources/js/addLimb.js"></script>
+
+</html>

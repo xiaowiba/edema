@@ -1,0 +1,34 @@
+{
+  "result": "200",
+  "data": [{
+    "CreateDate": "2019-01-04 00:00:00",
+    "DataValue": "69"
+  },
+    {
+      "CreateDate": "2019-01-03 00:00:00",
+      "DataValue": "72"
+    },
+    {
+      "CreateDate": "2018-12-27 00:00:00",
+      "DataValue": "86.9"
+    },
+    {
+      "CreateDate": "2018-12-14 00:00:00",
+      "DataValue": "70"
+    },
+    {
+      "CreateDate": "2018-12-12 00:00:00",
+      "DataValue": "69"
+    },
+    {
+      "CreateDate": "2018-12-10 00:00:00",
+      "DataValue": "200"
+    },
+    {
+      "CreateDate": "2018-12-09 00:00:00",
+      "DataValue": "69"
+    }
+  ],
+  "message": "成功",
+  "isdes": "0"
+}
