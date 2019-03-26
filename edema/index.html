@@ -229,7 +229,7 @@
                         </div>
                     </div>
                     <div class="limbImgContent">
-                        <div class="limbImg" ng-repeat="Img in item.Data.Img">
+                        <div class="limbImg" ng-repeat="Img in item.Data.Img track by $index">
                             <img ng-src="{{Img}}" data-preview-src="" data-preview-group="1" class="limbImgItem"/>
                         </div>
                     </div>
